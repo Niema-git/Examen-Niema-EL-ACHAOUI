@@ -11,6 +11,7 @@ import java.util.Date;
 
 @Entity
 @Data
+@Table(name = "remboursements")
 @NoArgsConstructor
 @AllArgsConstructor
 public class Remboursement {

@@ -2,9 +2,7 @@ package org.sid.creditbank.entities;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.sid.creditbank.enums.StatutCredit;
 
 import java.util.Date;
@@ -12,8 +10,11 @@ import java.util.List;
 
 @Entity
 @Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "credits")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "TYPE", discriminatorType = DiscriminatorType.STRING, length = 4)
 public abstract class Credit {
@@ -30,7 +31,7 @@ public abstract class Credit {
     private int duree;
     private double tauxInteret;
     @ManyToOne
-    private Client customer;
+    private Client client;
 
     @OneToMany(mappedBy = "credit", fetch = FetchType.LAZY)
     private List<Remboursement> remboursements;
