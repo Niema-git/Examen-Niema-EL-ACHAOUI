@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.sid.creditbank.entities.Credit;
 import org.sid.creditbank.enums.TypeRemboursement;
 
 import java.util.Date;

@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.sid.creditbank.enums.StatutCredit;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
