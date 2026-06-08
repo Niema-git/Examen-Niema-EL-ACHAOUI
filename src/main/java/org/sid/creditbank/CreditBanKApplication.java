@@ -55,7 +55,7 @@ public class CreditBanKApplication {
             ci.setStatut(StatutCredit.EN_COURS);
             ci.setMontant(800000);
             ci.setDuree(240);
-            ci.setTauxInteret(3.2);
+
             ci.setTypeBien(TypeBien.APPARTEMENT);
             creditRepository.save(ci);
 
